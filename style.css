@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.progress-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.progress-step{
+    width: 30px;
+    height: 30px;
+    background-color: #dbdbdb;
+    color: white;
+    border: 3px solid #bebebe;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.progress-step:not(:last-child){
+    margin-right: 4rem;
+}
+
+.progress-container::after{
+    content: "";
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    background-color: #bebebe;
+    z-index: -2;
+}
+
+.progress-bar{
+    position: absolute;
+    left: 0;
+    background-color: rgb(120, 120, 255);
+    height: 6px;
+    z-index: -1;
+    transition: all .5s;
+}
+
+.progress-btn{
+    width: 100px;
+    background-color: rgb(63, 63, 63);
+    color: white;
+    display: inline-block;
+    text-align: center;
+    padding: .5rem 0;
+    border-radius: 20px;
+    transition: all 0.3s;
+    margin: 0 0.5rem;
+    outline: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-disabled{
+    background-color: rgb(194, 194, 194);
+    cursor: not-allowed;
+}
+
+.active{
+    border-color: rgb(120, 120, 255);
+    transition: all .5s;
+}
+
